@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="news-logo.jpg" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                   <li id="world" onclick="onNavItemClick('world')" class="hover-link nav-item">World</li>
+                   <li id="politics" onclick="onNavItemClick('politics')" class="hover-link nav-item">Politics</li>
+                   <li id="business" onclick="onNavItemClick('business')" class="hover-link nav-item">Business</li>
+                   <li id="technology" onclick="onNavItemClick('technology')" class="hover-link nav-item">Technology</li>
+                   <li id="sports" onclick="onNavItemClick('sports')" class="hover-link nav-item">Sports</li>
+                   <li id="entertainment" onclick="onNavItemClick('entertainment')" class="hover-link nav-item">Entertainment</li>
+                   <li id="health" onclick="onNavItemClick('health')" class="hover-link nav-item">Health</li>
+
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Search here...">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+            <button id="themeToggle" title="Toggle Dark Mode">🌙</button>
+</div>
+        </div>
+        
+    </nav>
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">Source Of Article</h6>
+                <p class="news-desc" id="news-desc">This Description about Article</p>
+            </div> 
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
